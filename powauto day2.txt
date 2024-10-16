@@ -1,0 +1,97 @@
+1. <3mins automation
+2. connectors:
+	built-in connectors (ms office)
+	external connectors (trello,app/service)
+	custom connector (3rd party)
+3. 2 major things
+	-automation duration
+	-who will run the automation????
+4. auto vs instant vs scheduled
+5. monitoring
+*6. errors
+-----------------------------------------------------------
+
+AI->NLP Natural Language Processing
+
+1. email->(convert html->text)->analyze body if contains->excel 
+
+scenario:
+email->
+->contains 'deadline' in body
+->excel
+
+2nd step, body?
+
+2. delete "all" with condition
+
+from: johnreygoh
+-------------------------------------------------------------
+
+compose and variables
+
+
+trigger (DV)
+ |
+action1 (DV) -> output "full name"
+ |
+initialize variable "myname" (data type)
+ |
+set variable "myname" (assign value to variable)
+ |
+action2 (DV variable)
+ |
+set variable "myname" (reassign value to variable)
+ |	
+action3 (DV variable)
+-------------------------------------------------
+formatDateTime(addHours(utcNow(),8),'MMMM dd,yyyy')
+
+trigger(input)
+ |
+compose / variable
+ |
+notification
+
+first name: JOE
+last name: WAH
+full name: Joe Wah 
+birthdate: October 16, 2024
+
+"x" = firstname
+"y" = lastname
+
+concat(
+concat(toUpper(substring("x",1,1)),substring("x",2,length("x"))),
+' ',
+concat(toUpper(substring("y",1,1)),substring("y",2,length("y")))
+)
+
+concat
+(
+toUpper(substring(triggerBody()['text'],1,1)),
+toLower(substring(triggerBody()['text'],2,length(triggerBody()['text']))),
+' ',
+toUpper(substring(triggerBody()['text_1'],1,1)),
+toLower(substring(triggerBody()['text_1'],2,length(triggerBody()['text_1'])))
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
