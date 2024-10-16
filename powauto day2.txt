@@ -60,19 +60,13 @@ birthdate: October 16, 2024
 "x" = firstname
 "y" = lastname
 
-concat(
-concat(toUpper(substring("x",1,1)),substring("x",2,length("x"))),
-' ',
-concat(toUpper(substring("y",1,1)),substring("y",2,length("y")))
-)
-
 concat
 (
-toUpper(substring(triggerBody()['text'],1,1)),
-toLower(substring(triggerBody()['text'],2,length(triggerBody()['text']))),
+toUpper(substring(triggerBody()['text'],0,1)),
+toLower(substring(triggerBody()['text'],2,sub(length(triggerBody()['text']),2))),
 ' ',
-toUpper(substring(triggerBody()['text_1'],1,1)),
-toLower(substring(triggerBody()['text_1'],2,length(triggerBody()['text_1'])))
+toUpper(substring(triggerBody()['text_1'],0,1)),
+toLower(substring(triggerBody()['text_1'],2,sub(length(triggerBody()['text_1']),2)))
 )
 
 
